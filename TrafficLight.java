@@ -7,19 +7,13 @@ class TrafficLight {
 
     void showSignal() {
         System.out.println("Traffic Light is: " + lightColor);
+        for (long i = 0; i < 5000000000L; i++); 
     }
 
-    public static void main(String[] args) throws InterruptedException {
-        TrafficLight red = new TrafficLight("Red");
-        red.showSignal();
-        Thread.sleep(5000);
-
-        TrafficLight yellow = new TrafficLight("Yellow");
-        yellow.showSignal();
-        Thread.sleep(5000);
-
-        TrafficLight green = new TrafficLight("Green");
-        green.showSignal();
-        Thread.sleep(5000);
+    public static void main(String[] args) {
+        new TrafficLight("Red").showSignal();
+        new TrafficLight("Yellow").showSignal();
+        new TrafficLight("Green").showSignal();
     }
 }
+
