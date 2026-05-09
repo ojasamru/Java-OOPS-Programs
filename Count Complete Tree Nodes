@@ -1,0 +1,12 @@
+class Solution {
+    public int countNodes(TreeNode root) {
+        
+        // Base case
+        if(root == null) {
+            return 0;
+        }
+
+        // Count current node + left subtree + right subtree
+        return 1 + countNodes(root.left) + countNodes(root.right);
+    }
+}
